@@ -12,4 +12,7 @@ forums](https://discuss.streamlit.io).
 
 In the meantime, below is an example of what you can do with just a few lines of code:
 """
-!python run_model_py.py
+import subprocess
+
+# Ejecutar el archivo run_model_py.py
+subprocess.run(['python', 'run_model_py.py'], check=True, shell=True)

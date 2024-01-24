@@ -2,7 +2,7 @@ import altair as alt
 import numpy as np
 import pandas as pd
 import streamlit as st
-
+import run_model_py
 """
 # Welcome to Streamlit!
 
@@ -12,7 +12,9 @@ forums](https://discuss.streamlit.io).
 
 In the meantime, below is an example of what you can do with just a few lines of code:
 """
-import subprocess
 
-# Ejecutar el archivo run_model_py.py
-subprocess.run(['python', 'run_model_py.py'], check=True, shell=True)
+
+st.title("Aplicación de Streamlit")
+
+# Ejecutar la función principal de run_model_py.py
+data_usuario = run_model_py.capturar_entrada()

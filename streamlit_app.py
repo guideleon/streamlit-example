@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 import pickle
-model=pickle.load(open('model.pkl', 'rb'))
+model = pickle.load(open('model.pkl', 'rb'))
 
 st.title("Ingresar Datos para Predicción")
 

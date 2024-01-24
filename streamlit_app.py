@@ -75,7 +75,7 @@ if st.button("Realizar Predicción"):
 
     Prediccion = run_model_py.model.predict(input)
     Prediccion_str = str(Prediccion).strip('[]')
-
+st.text(Prediccion)
 Prediccion_str_con_separador = "{:,}".format(float(Prediccion_str))
 st.write("Resultado de la predicción:")
 st.write("Las ventas para las condiciones especificadas serán: ${} dólares".format(Prediccion_str_con_separador))

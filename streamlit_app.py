@@ -2,7 +2,10 @@ import altair as alt
 import numpy as np
 import pandas as pd
 import streamlit as st
-import model.pkl
+import pickle
+
+# Cargar el modelo
+model = pickle.load(open('model.pkl', 'rb'))
 
 st.title("Ingresar Datos para Predicción")
 
@@ -73,9 +76,9 @@ if st.button("Realizar Predicción"):
 
     input = datos_entrada[columnas_modelo]
 
-    Prediccion = run_model_py.model.predict(input)
+    Prediccion = model.predict(input)
     Prediccion_str = str(Prediccion).strip('[]')
-st.text(Prediccion)
-Prediccion_str_con_separador = "{:,}".format(float(Prediccion_str))
-st.write("Resultado de la predicción:")
-st.write("Las ventas para las condiciones especificadas serán: ${} dólares".format(Prediccion_str_con_separador))
+
+    Prediccion_str_con_separador = "{:,}".format(float(Prediccion_str))
+    st.write("Resultado de la predicción:")
+    st.write("Las ventas para las condiciones especificadas serán: ${} dólares".format(Prediccion_str_con_separador))

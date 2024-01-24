@@ -15,16 +15,16 @@ model=pickle.load(open('model.pkl', 'rb'))
 
 def capturar_entrada():
 
-    # Aquí capturas las variables
+    st.title("Ingrese los datos para hacer la predicción")
 
-    Temperature = float(input("Ingrese la Temperatura: "))
-    Fuel_Price = float(input("Ingrese el Precio del Combustible: "))
-    CPI = float(input("Ingrese el CPI: "))
-    Unemployment = float(input("Ingrese la Tasa de Desempleo: "))
-    Size = int(input("Ingrese el Tamaño de la tienda: "))
-    Store = int(input("Ingrese el Codigo de Tienda de entre 1 y 45: "))
-    Date = input("Ingrese la Fecha (AAAA-MM-DD): ")
-    IsHoliday_True = int(input("Ingrese la Holiday (1/0): "))
+    Temperature = st.number_input("Ingrese la Temperatura")
+    Fuel_Price = st.number_input("Ingrese el Precio del Combustible")
+    CPI = st.number_input("Ingrese el CPI")
+    Unemployment = st.number_input("Ingrese la Tasa de Desempleo")
+    Size = st.number_input("Ingrese el Tamaño de la tienda")
+    Store = st.selectbox("Seleccione el Código de la Tienda", list(range(1, 46)))
+    Date = st.date_input("Seleccione la Fecha")
+    IsHoliday_True = st.checkbox("¿Es día festivo?")
 
     datos_entrada = pd.DataFrame([{
         'Temperature': Temperature,
@@ -35,7 +35,6 @@ def capturar_entrada():
         'Size': Size,
         'Date': Date,
         'IsHoliday_True': IsHoliday_True
-        # Agrega aquí todas las variables transformadas
     }])
 
     return datos_entrada

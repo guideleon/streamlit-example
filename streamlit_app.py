@@ -12,4 +12,4 @@ forums](https://discuss.streamlit.io).
 
 In the meantime, below is an example of what you can do with just a few lines of code:
 """
-!streamlit run run_model_py.py
+run_model_py.py

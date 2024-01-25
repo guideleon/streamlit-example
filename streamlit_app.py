@@ -74,7 +74,13 @@ if st.button("Realizar Predicción"):
     input = datos_entrada[columnas_modelo]
    
     # Cargar el modelo
+
+    try:
     model = pickle.load(open('model.pkl', 'rb'))
+    except Exception as e:
+    st.error(f"Error al cargar el modelo: {e}")
+
+    
     Prediccion = model.predict(input)
     Prediccion_str = str(Prediccion).strip('[]')
 

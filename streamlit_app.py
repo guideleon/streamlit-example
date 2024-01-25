@@ -7,10 +7,8 @@ import matplotlib.pyplot as plt
 
 st.title("Ingresar Datos para Predicción")
 
-st.markdown("### Último dato actualizado:")
-st.markdown("---")
-st.markdown("**Temperature:** 58 grados")
-st.markdown("**Fuel:** 3.1")
+st.markdown('<p style="font-size:24px; color:#3366ff;">Último dato actualizado:</p>', unsafe_allow_html=True)
+st.markdown('<p style="font-size:20px; color:#ff6600;">Temperature: 58 grados - Fuel 3.1</p>', unsafe_allow_html=True)
 
 # Crear campos de entrada para los datos
 Temperature = st.slider("Temperature", min_value=0, max_value=100, value=10)

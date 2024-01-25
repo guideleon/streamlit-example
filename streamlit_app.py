@@ -8,7 +8,6 @@ import matplotlib.pyplot as plt
 st.title("Ingresar Datos para Predicción")
 
 st.markdown(
-    """
     <style>
     @keyframes moveData {
         0% { transform: translateX(100%); }
@@ -21,7 +20,6 @@ st.markdown(
         position: relative;
     }
     </style>
-    """
 )
 
 # Crea un elemento de texto con la clase CSS para el desplazamiento

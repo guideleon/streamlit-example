@@ -7,16 +7,6 @@ import matplotlib.pyplot as plt
 
 st.title("Ingresar Datos para Predicción")
 
-# Crear un slider para ajustar un valor
-data_to_scroll = st.slider("Valor a desplazar:", min_value=0, max_value=100, value=50)
-
-# Usar el valor del slider para realizar cálculos o mostrar información
-st.write("Valor seleccionado:", data_to_scroll)
-
-# Puedes realizar operaciones con los datos desplazados y mostrar los resultados
-result = data_to_scroll * 2
-st.write("Resultado de la operación:", result)
-
 # Crear campos de entrada para los datos
 Temperature = st.slider("Valor a desplazar:", min_value=0, max_value=100, value=10)
 Fuel_Price = st.number_input("Precio del Combustible", min_value=0.0)

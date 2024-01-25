@@ -18,7 +18,7 @@ st.markdown('<p style="font-size:20px; color:#ff6600;">Unemployment: 7.1%</p>', 
 st.markdown("<p style='text-align:center; font-size:24px; font-weight:bold;'>Enter Data for Prediction and enjoy the Magic!</p>", unsafe_allow_html=True)
 # Crear campos de entrada para los datos
 Temperature = st.slider("Temperature", min_value=0, max_value=100, value=58)
-Fuel_Price = st.number_input("Fuel Price", value=2.1)
+Fuel_Price = st.number_input("Fuel Price", value=3.1)
 CPI = st.number_input("CPI(consumer price index", value=183.0)
 Unemployment = st.number_input("Unemployment Rate", value=7.1)
 #Size = st.number_input("Tamaño de la Tienda", min_value=0)

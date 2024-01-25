@@ -15,15 +15,15 @@ st.markdown('<p style="font-size:20px; color:#ff6600;">Unemployment: 7.1%</p>', 
 
 # Crear campos de entrada para los datos
 Temperature = st.slider("Temperature", min_value=0, max_value=100, value=58)
-Fuel_Price = st.number_input("Precio del Combustible", value=2.1)
-CPI = st.number_input("CPI", value=183.0)
-Unemployment = st.number_input("Tasa de Desempleo", value=7.1)
+Fuel_Price = st.number_input("Fuel Price", value=2.1)
+CPI = st.number_input("CPI(consumer price index", value=183.0)
+Unemployment = st.number_input("Unemployment Rate", value=7.1)
 #Size = st.number_input("Tamaño de la Tienda", min_value=0)
-Store = st.number_input("Código de la Tienda (entre 1 y 45)", min_value=1, max_value=45)
-Date = st.date_input("Fecha")
-IsHoliday_True = st.checkbox("Es día festivo")
+Store = st.number_input("Store Code (between 1 y 45)", min_value=1, max_value=45)
+Date = st.date_input("Date")
+IsHoliday_True = st.checkbox("Is it a holiday?")
 # Botón para realizar la predicción
-if st.button("Realizar Predicción"):
+if st.button("Let´s Predict"):
     # Crear un DataFrame con los datos ingresados
 
     datos_entrada = pd.DataFrame([{

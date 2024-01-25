@@ -79,3 +79,51 @@ if st.button("Realizar Predicción"):
     Prediccion_str_con_separador = "{:,}".format(float(Prediccion_str))
     st.write("Resultado de la predicción:")
     st.write("Las ventas para las condiciones especificadas serán: ${} dólares".format(Prediccion_str_con_separador))
+output = pd.read_excel('output.xlsx', index_col=0)
+
+store_number = int(Store)
+
+# Assuming 'df' is your DataFrame
+# Filter data for Store 1
+if store_number != 0:
+    store_1_data = output[output['Store'] == int(store_number)]
+
+    title = f'Weekly Sales and Predicted Sales for Store {store_number}'
+
+else:
+    store_1_data = pd.DataFrame(output.groupby('Date').sum().reset_index(drop = False))
+    Pred_sales = []
+    contador = 0
+    for i in store_1_data['Pred_sales']:
+        if i == 0:
+            Pred_sales.append(None)
+
+        elif contador ==0:
+            Pred_sales.append(None)
+            contador += 1
+
+        else:
+
+            Pred_sales.append(i)
+            contador+=1
+
+    store_1_data['Pred_sales'] = Pred_sales
+    store_1_data = store_1_data[1:]
+
+    title = 'Weekly Sales and Predicted Sales for all stores'
+
+# Convert 'Date' column to datetime
+store_1_data['Date'] = pd.to_datetime(store_1_data['Date'])
+
+fig, ax = plt.subplots(figsize=(10, 6))
+ax.plot(store_1_data['Date'].values, store_1_data['Weekly_Sales'].values, label='Weekly Sales')
+ax.plot(store_1_data['Date'].values, store_1_data['Pred_sales'].values, label='Pred_sales', linestyle='--', color='orange')
+
+# Personalizar el gráfico
+ax.set_title("Título del gráfico")
+ax.set_xlabel('Fecha')
+ax.set_ylabel('Ventas')
+ax.legend()
+
+# Mostrar el gráfico en Streamlit
+st.pyplot(fig)

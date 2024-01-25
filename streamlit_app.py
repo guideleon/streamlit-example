@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 st.title("Ingresar Datos para Predicción")
 
 # Crear campos de entrada para los datos
-Temperature = st.slider("Valor a desplazar:", min_value=0, max_value=100, value=10)
+Temperature = st.slider("Temperature", min_value=0, max_value=100, value=10)
 Fuel_Price = st.number_input("Precio del Combustible", min_value=0.0)
 CPI = st.number_input("CPI", min_value=0.0)
 Unemployment = st.number_input("Tasa de Desempleo", min_value=0.0)

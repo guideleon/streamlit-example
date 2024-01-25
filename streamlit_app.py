@@ -122,9 +122,9 @@ if st.button("Realizar Predicción"):
     ax.plot(store_1_data['Date'].values, store_1_data['Pred_sales'].values, label='Pred_sales', linestyle='--', color='orange')
     
     # Personalizar el gráfico
-    ax.set_title("Título del gráfico")
-    ax.set_xlabel('Fecha')
-    ax.set_ylabel('Ventas')
+    ax.set_title("Weekly Sales Evolution")
+    ax.set_xlabel('Date')
+    ax.set_ylabel('Sales')
     ax.legend()
     
     # Mostrar el gráfico en Streamlit

@@ -1,5 +1,6 @@
 altair
 pandas
 streamlit
-xgboost==1.0.2
-sklearn
+xgboost==2.0.3
+streamlit==2.0.3
+

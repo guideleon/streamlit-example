@@ -4,22 +4,14 @@ import pandas as pd
 import streamlit as st
 import pickle
 import matplotlib.pyplot as plt
-import time
 
 st.title("Ingresar Datos para Predicción")
 
+st.markdown("### Último dato actualizado:")
+st.markdown("---")
+st.markdown("**Temperature:** 58 grados")
+st.markdown("**Fuel:** 3.1")
 
-# Texto inicial
-text = "Último dato actualizado: Temperature: 58 grados - Fuel 3.1"
-
-# Mostrar el texto en la aplicación
-st.markdown(text)
-
-# Simular el desplazamiento actualizando el texto
-while True:
-    text = text[1:] + text[0]  # Mover el primer carácter al final
-    st.markdown(text)
-    time.sleep(0.5)  # Pausa de 0.5 segundos entre actualizaciones
 # Crear campos de entrada para los datos
 Temperature = st.slider("Temperature", min_value=0, max_value=100, value=10)
 Fuel_Price = st.number_input("Precio del Combustible", value=1.0)

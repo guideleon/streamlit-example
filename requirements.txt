@@ -2,3 +2,4 @@ altair
 pandas
 streamlit
 xgboost==1.0.2
+sklearn

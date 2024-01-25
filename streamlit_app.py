@@ -78,7 +78,6 @@ if st.button("Realizar Predicción"):
         st.error(f"Error al cargar el modelo: {e}")
         model = None  # Asegura que el modelo es None si falla la carga
 
-    st.write(input)
     #Prediccion = run_model_py.model.predict(input)
     
     Prediccion = model.predict(input)

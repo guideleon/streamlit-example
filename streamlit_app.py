@@ -12,7 +12,7 @@ Temperature = st.number_input("Temperatura", min_value=0.0)
 Fuel_Price = st.number_input("Precio del Combustible", min_value=0.0)
 CPI = st.number_input("CPI", min_value=0.0)
 Unemployment = st.number_input("Tasa de Desempleo", min_value=0.0)
-Size = st.number_input("Tamaño de la Tienda", min_value=0)
+#Size = st.number_input("Tamaño de la Tienda", min_value=0)
 Store = st.number_input("Código de la Tienda (entre 1 y 45)", min_value=1, max_value=45)
 Date = st.date_input("Fecha")
 IsHoliday_True = st.checkbox("Es día festivo")
@@ -25,7 +25,7 @@ if st.button("Realizar Predicción"):
         'Fuel_Price': Fuel_Price,
         'CPI': CPI,
         'Unemployment': Unemployment,
-        'Size': Size,
+        'Size': 151315,
         'Store': Store,
         'Date': Date,
         'IsHoliday_True': IsHoliday_True

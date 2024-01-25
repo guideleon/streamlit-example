@@ -9,7 +9,7 @@ st.title("Ingresar Datos para Predicción")
 
 # Crear campos de entrada para los datos
 Temperature = st.slider("Temperature", min_value=0, max_value=100, value=10)
-Fuel_Price = st.number_input("Precio del Combustible", min_value=0.0)
+Fuel_Price = st.number_input("Precio del Combustible", value=1.0)
 CPI = st.number_input("CPI", min_value=0.0)
 Unemployment = st.number_input("Tasa de Desempleo", min_value=0.0)
 #Size = st.number_input("Tamaño de la Tienda", min_value=0)
@@ -71,6 +71,8 @@ if st.button("Realizar Predicción"):
     except Exception as e:
         st.error(f"Error al cargar el modelo: {e}")
         model = None  # Asegura que el modelo es None si falla la carga
+
+    st.write(input)
     #Prediccion = run_model_py.model.predict(input)
     
     Prediccion = model.predict(input)

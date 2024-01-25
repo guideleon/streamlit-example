@@ -6,4 +6,4 @@ xgboost==2.0.3
 pickle-mixin
 scikit-learn
 catboost
-
+matplotlib

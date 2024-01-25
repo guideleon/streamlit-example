@@ -2,6 +2,7 @@ import altair as alt
 import numpy as np
 import pandas as pd
 import streamlit as st
+import xgboost as xgb
 import pickle
 
 st.title("Ingresar Datos para Predicción")

@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 
 st.title("Welcome again!")
 
-st.markdown("<p style='text-align:center; font-size:24px; font-weight:bold;'>First of all, we provide you with some reference values.</p>", unsafe_allow_html=True)
+st.markdown("<p style='text-align:center; font-size:24px; font-weight:bold;'>First of all, here are some reference values</p>", unsafe_allow_html=True)
 st.markdown('<p style="font-size:24px; color:#3366ff;">Average predictions for the next 30 days:</p>', unsafe_allow_html=True)
 st.markdown('<p style="font-size:20px; color:#ff6600;">Temperature: 58 degrees</p>', unsafe_allow_html=True)
 st.markdown('<p style="font-size:20px; color:#ff6600;">Fuel Price: 3.1 dollars per gallon</p>', unsafe_allow_html=True)

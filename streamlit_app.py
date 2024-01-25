@@ -2,7 +2,7 @@ import altair as alt
 import numpy as np
 import pandas as pd
 import streamlit as st
-#import xgboost
+import xgboost
 import pickle
 
 st.title("Ingresar Datos para Predicción")
@@ -75,10 +75,10 @@ if st.button("Realizar Predicción"):
 
     st.write("Contenido de 'model':", model)
     
-    #Prediccion = model.predict(input)
-    #Prediccion_str = str(Prediccion).strip('[]')
+    Prediccion = model.predict(input)
+    Prediccion_str = str(Prediccion).strip('[]')
 
     #st.text(Prediccion)
-    #Prediccion_str_con_separador = "{:,}".format(float(Prediccion_str))
-    #st.write("Resultado de la predicción:")
-    #st.write("Las ventas para las condiciones especificadas serán: ${} dólares".format(Prediccion_str_con_separador))
+    Prediccion_str_con_separador = "{:,}".format(float(Prediccion_str))
+    st.write("Resultado de la predicción:")
+    st.write("Las ventas para las condiciones especificadas serán: ${} dólares".format(Prediccion_str_con_separador))

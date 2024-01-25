@@ -2,7 +2,7 @@ import altair as alt
 import numpy as np
 import pandas as pd
 import streamlit as st
-pip install xgboost
+!pip install xgboost
 import xgboost as xgb
 import pickle
 

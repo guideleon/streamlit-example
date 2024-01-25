@@ -5,7 +5,7 @@ import streamlit as st
 import pickle
 import matplotlib.pyplot as plt
 
-st.title(<p style='text-align:center;'>"Welcome again!</p>", unsafe_allow_html=True")
+st.title("Welcome again!")
 
 st.markdown('<p style="font-size:24px; color:#3366ff;">Average predictions for the next 30 days:</p>', unsafe_allow_html=True)
 st.markdown('<p style="font-size:20px; color:#ff6600;">Temperature: 58 degrees</p>', unsafe_allow_html=True)

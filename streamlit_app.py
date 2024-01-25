@@ -89,7 +89,7 @@ if st.button("Let´s Predict"):
     #st.text(Prediccion)
     Prediccion_str_con_separador = "{:,}".format(float(Prediccion_str))
     st.markdown("<p style='text-align:center; font-size:24px; font-weight:bold;'>Now let´s review the results</p>", unsafe_allow_html=True)
-    st.write("Las ventas para las condiciones especificadas serán: ${} dólares".format(Prediccion_str_con_separador))
+    st.write("The sales for the specified conditions will be: ${} dollars".format(Prediccion_str_con_separador))
 
     output = pd.read_excel('output.xlsx', index_col=0)
     

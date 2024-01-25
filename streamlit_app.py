@@ -14,7 +14,7 @@ st.markdown('<p style="font-size:20px; color:#ff6600;">CPI: 183 base points</p>'
 st.markdown('<p style="font-size:20px; color:#ff6600;">Unemployment: 7.1%</p>', unsafe_allow_html=True)
 
 
-st.markdown("<p style='text-align:center;'>Enter Data for Prediction and enjoy the Magic!</p>", unsafe_allow_html=True)
+st.markdown("<p style='text-align:center; font-size:24px; font-weight:bold;'>Enter Data for Prediction and enjoy the Magic!</p>", unsafe_allow_html=True)
 # Crear campos de entrada para los datos
 Temperature = st.slider("Temperature", min_value=0, max_value=100, value=58)
 Fuel_Price = st.number_input("Fuel Price", value=2.1)

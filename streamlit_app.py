@@ -19,7 +19,8 @@ IsHoliday_True = st.checkbox("Es día festivo")
 
 # Cargar el modelo
 try:
-    model = pickle.load(open('model.pkl', 'rb'))
+    modelo_xgboost = xgb.Booster()
+    modelo_xgboost.load_model('model.pkl')
 except Exception as e:
     st.error(f"Error al cargar el modelo: {e}")
     model = None  # Asegura que el modelo es None si falla la carga

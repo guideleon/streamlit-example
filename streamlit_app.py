@@ -7,23 +7,27 @@ import matplotlib.pyplot as plt
 
 st.title("Ingresar Datos para Predicción")
 
+# Agrega un contenedor HTML personalizado
 st.markdown(
+    """
     <style>
     @keyframes moveData {
         0% { transform: translateX(100%); }
         100% { transform: translateX(-100%); }
     }
     .moving-data {
-        animation: moveData 5s linear infinite;
+        animation: moveData 10s linear infinite;
         white-space: nowrap;
         overflow: hidden;
         position: relative;
+        font-size: 20px;
     }
     </style>
+    """
 )
 
 # Crea un elemento de texto con la clase CSS para el desplazamiento
-st.markdown('<div class="moving-data">Datos que se desplazan de derecha a izquierda...</div>', unsafe_allow_html=True)
+st.markdown('<div class="moving-data">Último dato actualizado: Temperature: 58 grados - Fuel 3.1</div>', unsafe_allow_html=True)
 
 # Crear campos de entrada para los datos
 Temperature = st.slider("Temperature", min_value=0, max_value=100, value=10)

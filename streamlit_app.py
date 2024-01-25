@@ -24,7 +24,7 @@ if st.button("Realizar Predicción"):
         'Fuel_Price': Fuel_Price,
         'CPI': CPI,
         'Unemployment': Unemployment,
-        'Size': 151315,
+        'Size': 200898,
         'Store': Store,
         'Date': Date,
         'IsHoliday_True': IsHoliday_True
@@ -71,8 +71,6 @@ if st.button("Realizar Predicción"):
         st.error(f"Error al cargar el modelo: {e}")
         model = None  # Asegura que el modelo es None si falla la carga
     #Prediccion = run_model_py.model.predict(input)
-
-    st.write("Contenido de 'model':", model)
     
     Prediccion = model.predict(input)
     Prediccion_str = str(Prediccion).strip('[]')

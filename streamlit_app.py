@@ -7,14 +7,17 @@ import matplotlib.pyplot as plt
 
 st.title("Ingresar Datos para Predicción")
 
-st.markdown('<p style="font-size:24px; color:#3366ff;">Último dato actualizado:</p>', unsafe_allow_html=True)
-st.markdown('<p style="font-size:20px; color:#ff6600;">Temperature: 58 grados - Fuel 3.1</p>', unsafe_allow_html=True)
+st.markdown('<p style="font-size:24px; color:#3366ff;">Average predictions for the next 30 days:</p>', unsafe_allow_html=True)
+st.markdown('<p style="font-size:20px; color:#ff6600;">Temperature: 58 degrees</p>', unsafe_allow_html=True)
+st.markdown('<p style="font-size:20px; color:#ff6600;">Fuel Price: 2.1 dollars</p>', unsafe_allow_html=True)
+st.markdown('<p style="font-size:20px; color:#ff6600;">CPI: 183 base points</p>', unsafe_allow_html=True)
+st.markdown('<p style="font-size:20px; color:#ff6600;">Unemployment: 7.1%</p>', unsafe_allow_html=True)
 
 # Crear campos de entrada para los datos
-Temperature = st.slider("Temperature", min_value=0, max_value=100, value=10)
-Fuel_Price = st.number_input("Precio del Combustible", value=1.0)
-CPI = st.number_input("CPI", min_value=0.0)
-Unemployment = st.number_input("Tasa de Desempleo", min_value=0.0)
+Temperature = st.slider("Temperature", min_value=0, max_value=100, value=58)
+Fuel_Price = st.number_input("Precio del Combustible", value=2.1)
+CPI = st.number_input("CPI", value=183.0)
+Unemployment = st.number_input("Tasa de Desempleo", value=7.1)
 #Size = st.number_input("Tamaño de la Tienda", min_value=0)
 Store = st.number_input("Código de la Tienda (entre 1 y 45)", min_value=1, max_value=45)
 Date = st.date_input("Fecha")

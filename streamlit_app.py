@@ -4,9 +4,6 @@ import pandas as pd
 import streamlit as st
 import pickle
 
-# Cargar el modelo
-# model = pickle.load(open('model.pkl', 'rb'))
-
 st.title("Ingresar Datos para Predicción")
 
 # Crear campos de entrada para los datos
@@ -75,7 +72,9 @@ if st.button("Realizar Predicción"):
         posicion_insercion += 1
 
     input = datos_entrada[columnas_modelo]
-
+   
+    # Cargar el modelo
+    model = pickle.load(open('model.pkl', 'rb'))
     Prediccion = model.predict(input)
     Prediccion_str = str(Prediccion).strip('[]')
 

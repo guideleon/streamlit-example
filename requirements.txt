@@ -2,7 +2,7 @@ altair
 streamlit
 pandas
 numpy
-xgboost
+xgboost==2.0.3
 pickle-mixin
 scikit-learn
 catboost
